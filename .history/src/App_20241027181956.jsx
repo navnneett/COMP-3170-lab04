@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Heading, VStack, ChakraProvider, Button, HStack } from '@chakra-ui/react'; // Ensure HStack and Button are imported
+import { Box, Heading, VStack, ChakraProvider } from '@chakra-ui/react';
 import TaskForm from './components/TaskForm'; 
 import Task from './components/Task'; 
 
@@ -31,7 +31,7 @@ function App() {
     if (filter === "Completed") return task.completed;
     if (filter === "Pending") return !task.completed;
     return true;
-  });
+  })
 
   return (
     <ChakraProvider>
@@ -41,13 +41,13 @@ function App() {
 
         {/* Filter Buttons */}
         <HStack mb={4}>
-          <Button onClick={() => setFilter("All")} colorScheme={filter === "All" ? "yellow" : "gray"}>
+          <Button onClick={() => setFilter("All")} colorScheme={filter === "All" ? "blue" : "gray"}>
             All
           </Button>
-          <Button onClick={() => setFilter("Completed")} colorScheme={filter === "Completed" ? "yellow" : "gray"}>
+          <Button onClick={() => setFilter("Completed")} colorScheme={filter === "Completed" ? "blue" : "gray"}>
             Completed
           </Button>
-          <Button onClick={() => setFilter("Pending")} colorScheme={filter === "Pending" ? "yellow" : "gray"}>
+          <Button onClick={() => setFilter("Pending")} colorScheme={filter === "Pending" ? "blue" : "gray"}>
             Pending
           </Button>
         </HStack>
@@ -65,7 +65,7 @@ function App() {
               />
             ))
           ) : (
-            <Heading size="sm" color="gray.500">No tasks available</Heading>
+            <p>No tasks available</p>
           )}
         </VStack>
       </Box>

@@ -41,13 +41,13 @@ function App() {
 
         {/* Filter Buttons */}
         <HStack mb={4}>
-          <Button onClick={() => setFilter("All")} colorScheme={filter === "All" ? "yellow" : "gray"}>
+          <Button onClick={() => setFilter("All")} colorScheme={filter === "All" ? "blue" : "gray"}>
             All
           </Button>
-          <Button onClick={() => setFilter("Completed")} colorScheme={filter === "Completed" ? "yellow" : "gray"}>
+          <Button onClick={() => setFilter("Completed")} colorScheme={filter === "Completed" ? "blue" : "gray"}>
             Completed
           </Button>
-          <Button onClick={() => setFilter("Pending")} colorScheme={filter === "Pending" ? "yellow" : "gray"}>
+          <Button onClick={() => setFilter("Pending")} colorScheme={filter === "Pending" ? "blue" : "gray"}>
             Pending
           </Button>
         </HStack>
